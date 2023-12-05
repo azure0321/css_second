@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <script>
+            function execute(){
+                let food1 = prompt("첫번째 음식가격을 입력하세요.");
+                let food2 = prompt("두번째 음식가격을 입력하세요.");
+                let cnt = prompt("인원 수를 입력해주세요.");
+                let result;
+                food1 = parseInt(food1);
+                food2 = parseInt(food2);
+                cnt = parseInt(cnt);
+                console.log(`food1 : ${typeof food1}`);
+                console.log(`food2 : ${typeof food2}`);
+                console.log(`cnt : ${typeof cnt}`);
+                result = (food1+food2)/cnt;
+                console.log(result);}
+        </script>
+    </head>
+<body>
+    <button type="button" onClick="execute()">실행</button>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <script>
+        function delay(ms){
+            return new Promise(resolve => setTimeout(resolve,ms));
+        }
+        async function getApple(){
+            await delay(4000);
+            return '🍎';
+        }
+        async function getKiwi(){
+            await delay(1000);
+            return '🥝';
+        }
+        async function getMango(){
+            await delay(1000);
+            return '🥭';
+        }
+        async function sell(){
+            const apple = await getApple();
+            const kiwi = await getKiwi();
+            const mango = await getMango();
+            return `${apple}, ${kiwi}, ${mango}`;
+        }   
+        sell().then(result => console.log(result));
+        console.log(sell());      
+
+   </script>
+</head>
+<body>
+    <div id = "content"></div>
+</body>
+</html>

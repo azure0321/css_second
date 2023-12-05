@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        class Student{
+            constructor(name,age,enrolled,score){
+                this.name=name;
+                this.age=age;
+                this.enrolled=enrolled;
+                this.score=score;
+            }
+        };
+        const student = [
+            new Student("a",29,true,49),
+            new Student("b",28,false,80),
+            new Student("c",30,true,90),
+            new Student("d",40,false,66),
+            new Student("e",18,false,90)
+            ];
+        const result = student.forEach((val)=>{
+            return val.score;
+        });
+        newArray = [];
+        for (var i = 0; i <student.length; i++){
+            newArray.push(student[i].score);
+        }
+        console.log(newArray);
+        const result1 = student.map(x=>x.score);
+        console.log(result1);
+        const result2 = student.filter(x => x.score>50).map(x => x.name);
+        console.log(result2);
+    </script>
+</head>
+<body>
+</body>
+</html>

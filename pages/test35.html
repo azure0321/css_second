@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <script>
+        function getApple(){
+            return new Promise((resolve) => 
+            {setTimeout(resolve('🍎'),3000);})
+        }
+        function sellApple(){
+            return new Promise((resolve) => {
+                getApple().then(apple => resolve(apple))
+            })
+        }
+        sellApple().then(result => console.log(result));
+        console.log(sellApple());    
+   </script>
+</head>
+<body>
+    <div id = "content"></div>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <script>
+            function execute(){function A(){console.log("funcA");}
+                               const B = function(){console.log("funcB");}
+                               console.log(A);
+                               console.log(B);
+                               const funcA =A;
+                               funcA();}
+        </script>    
+    </head>
+<body>
+    <button type="button" onClick="execute()">실행</button>
+</body>    
+</html>

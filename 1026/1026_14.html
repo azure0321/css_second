@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <script>
+            function execute(){const print1 = function(){console.log("print1");}
+                               print1();
+                               const print2 = function(){console.log("print2");}
+                               print2();
+                               const print3 = function(){console.log("print3");}
+                               print3();
+                               const print4 = print3;
+                               print4();}        
+        </script>
+    </head>
+<body>
+    <button type="button" onClick="execute()">실행</button> 
+</body>    
+</html>

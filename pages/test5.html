@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        class Animal{
+            constructor(name){
+                this.name = name;
+                console.log();
+            }
+            speak(){
+                console.log(`${this.name} make a noise`);
+            }
+        }
+
+        class Cat extends Animal{
+            constructor(name){
+                super(name);
+            }
+            speak(){
+                console.log(`${this.name} mew mew`);
+            }
+            behavior(){
+                console.log(`${this.name} like a person`);
+            }
+        }
+
+        class Dog extends Animal{
+            constructor(name){
+                super(name);
+            }
+            speak(){
+                console.log(`${this.name} bow bow`);
+            }
+            behavior(){
+                console.log(`${this.name} like a person`);
+            }
+        }
+
+        class WildAnimal extends Animal{
+            constructor(name){
+                super(name)
+            }
+        }
+        cat = new Cat("reo");
+        dog = new Dog("o's");
+        fox = new WildAnimal("fox");
+        cat.speak();
+        dog.speak();
+        fox.speak();
+        cat.behavior();
+        dog.behavior();
+
+    </script>
+    <style>
+    </style>
+</head>
+<body>
+
+</body>
+</html>

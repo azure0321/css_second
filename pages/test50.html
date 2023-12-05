@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KepcoA</title>
+</head>
+<body>
+   검색어 입력 : <input type = "text" name = "search">
+</body>
+<script>
+    const input = document.querySelector('[name=search]');
+    console.log(input.value);
+    input.addEventListener('focus',()=>{
+        input.value += "#";
+    })
+</script>
+</html>

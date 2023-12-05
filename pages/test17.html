@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        class Student{
+            constructor(name,age,enrolled,score){
+                this.name=name;
+                this.age=age;
+                this.enrolled=enrolled;
+                this.score=score;
+            }
+        }
+        const student = [
+            new Student("a",29,true,49),
+            new Student("b",28,false,80),
+            new Student("c",30,true,90),
+            new Student("d",40,false,66),
+            new Student("e",18,false,90)
+            ]
+        let result = student.find((value,index,array)=>{
+                        return value.score >= 80 && value.enrolled;
+                    })
+        console.log(result);
+        result = student.some((value,index,array)=>{
+            return value.score <50;
+        })
+        console.log(result);
+    </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <script>
+            function execute(){
+                function printAll(...args){
+                    for(let i = 0; i <args.length; i++){
+                        console.log(args[i]);}
+                        args.forEach((args)=>{console.log(args);});}
+                        printAll('abcd','efghi','gklmn');
+                        function checkData(data){
+                            let result = [];
+                            data.forEach(val=>{result.push({name:val.name,score:val.score,pass:val.score>60?"pass" : "fail"})})
+                            return result;}
+                        let score=[{name:'A',score:88},{name:'B',score:77},{name:'C',score:66},{name:'D',score:55}];
+                        result = checkData(score);
+                        console.log(result)}       
+        </script>
+    </head>
+<body>
+    <button type="button" onClick="execute()">실행</button> 
+</body>    
+</html>

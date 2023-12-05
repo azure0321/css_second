@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        class User{
+            constructor(firstName, lastName, age){
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.age = age;
+        }
+        get age(){
+            return this._age;
+        }
+        
+        set age(value){
+            if (value < 0){
+                this._age = 0;
+            }
+            else{
+                this._age = value;
+            }
+        }
+    }
+    
+    const kwlee = new User('kangwook','lee',-1);
+    console.log(`${kwlee.firstName} ${kwlee.lastName} ${kwlee.age}`)
+
+    </script>
+    <style>
+    </style>
+</head>
+<body>
+
+</body>
+</html>

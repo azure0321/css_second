@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KepcoA</title>
+    <style>
+        body{
+            display: flex;
+            align-items:center;
+            align-content:center;
+        }
+        table{
+            width:50vw;
+            height:50vh;
+            text-align:center;
+            font-size:1.5em;
+            background-color:white;
+        }
+        td{
+            border:solid 2px black;
+        }
+        tr:first-child td{
+            border-top:solid 2px black;
+        }
+        tr:last-child td{
+            border-bottom:solid 2px black;
+        }
+        td:first-child{
+            border-left:solid 2px black;
+        }
+        td:last-child{
+            border-right:solid 2px black;
+        }
+    </style>
+</head>
+<body>
+    <div id="bingo"></div>
+</body>
+<script>
+    const size = 3;
+    const number = new Array();
+    for (let i = 1; i <=size*size; i++){
+        number.push(i);
+    }
+    number.sort(()=>Math.random() - 0.5);
+
+    const table = document.createElement('table');
+    let tr;
+    for (let i = 0; i < number.length; i++){
+        if (i % 3 ==0){
+        tr = document.createElement('tr');
+        }
+        num = number[i];
+        const td = document.createElement('td');
+        const val = document.createTextNode(num);
+        tr.appendChild(td);
+        td.appendChild(val);
+        table.appendChild(tr);
+    }
+    document.querySelector("#bingo").appendChild(table);
+    elem = document.querySelectorAll('td');
+    elem.forEach((e) => e.addEventListener('click',
+    ()=>{
+        console.log(e.getAttribute('style'))
+        if (e.getAttribute('style')==null){
+            e.style.backgroundColor='beige';}
+        else{e.style.backgroundColor=null;}
+        console.log(e.style.backgroundColor);
+        }));
+</script>
+</html>

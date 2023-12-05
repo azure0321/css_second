@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <script>
+            function execute(){const quiz = function(answer){
+                               if (answer=="love you"){printYes();}
+                                   else{printNo();}}
+                                   const printYes = function(){console.log("yes");}
+                                   const printNo = function(){console.log("no");};
+                                   let answer = prompt("나를 사랑하십니까?");
+                                   quiz(answer);}        
+        </script>
+    </head>
+<body>
+    <button type="button" onClick="execute()">실행</button> 
+</body>    
+</html>

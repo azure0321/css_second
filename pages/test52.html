@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KepcoA</title>
+</head>
+<body>
+    <h3>당신이 좋아하는 동물을 선택하세요.</h3>
+    <input type = "radio" name ="pet" value="강아지">강아지<br>
+    <input type = "radio" name ="pet" value="고양이">고양이<br>
+    <input type = "radio" name ="pet" value="햄스터">햄스터<br>
+    <input type = "radio" name ="pet" value="기타">기타<br>
+    <hr>
+    <h3 id = "output"></h3>
+</body>
+<script>
+    const output = document.getElementById('output');
+    const radios = document.querySelectorAll('[name=pet]');
+
+    for (let i = 0; i < radios.length; i++){
+        radios[i].addEventListener('change',()=>{
+        output.textContent= `선택한 동물은 ${radios[i].value} 입니다.`;
+    });
+    }
+
+    // radios.forEach((radio) => {
+    //     radio.addEventListener('change',() => {
+    //         radios.textContent = `선택한 동물은 ${radio.value} 입니다.`;
+    //     })
+    // })
+
+    // radios[0].addEventListener('change',()=>{
+    //     output.textContent= `선택한 동물은 ${radios[0].value}입니다.`;
+    // }); 
+    // radios[1].addEventListener('change',()=>{
+    //     output.textContent= `선택한 동물은 ${radios[1].value}입니다.`;
+    // });
+    // radios[2].addEventListener('change',()=>{
+    //     output.textContent= `선택한 동물은 ${radios[2].value}입니다.`;
+    // });
+    // radios[3].addEventListener('change',()=>{
+    //     output.textContent= `선택한 동물은 ${radios[3].value}입니다.`;
+    // });
+</script>
+</html>

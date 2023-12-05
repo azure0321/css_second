@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Calculator</title>
+<style>
+  table{width: 200px;
+        height:100px;}
+  .Num{background-color:blanchedalmond;}
+  .Sub{background-color:peachpuff;}
+</style>
+<script language="javascript" type="text/javascript">
+  var Temp= new String([0]);
+  var Num9='9';
+  var Num8='8';
+  var Num7='7';
+  var Num6='6';
+  var Num5='5';
+  var Num4='4';
+  var Num3='3';
+  var Num2='2';
+  var Num1='1';
+  var Num0='0';
+  var Plus='+';
+  var Minus='-';
+  var Multiply='*';
+  var Divide='/';
+ 
+  function Option(obj)
+    {obj.Result.value= eval(obj.Result.value)}
+ 
+  function Cal(obj,string)
+    {obj.Result.value+=string}
+
+  function Clear(obj)
+    {obj.Result.value+=''}
+</script> 
+</head>
+<body>
+  <form name="Calculate">
+    <table border="1" >
+      <tr>
+        <td><input type="text" size=25 name="Result" value="" action= "Option(this.form)" readonly="true"></td>
+      </tr>
+
+      <tr>
+        <td>
+          <table border="1"> 
+            <td><input type="button" name="Num" value="9" onclick="Cal(this.form,Num9)" class="Num"></td>
+            <td><input type="button" name="Num" value="8" onclick="Cal(this.form,Num8)" class="Num"> </td>
+            <td><input type="button" name="Num" value="7" onclick="Cal(this.form,Num7)" class="Num"></td>
+            <td><input type="button"  name="Sub" value="+" onclick="Cal(this.form,Plus)" class="Sub"></td>
+      </tr>
+
+      <tr>
+        <td><input type="button" name="Num" value="6"  onclick="Cal(this.form,Num6)" class="Num"></td>
+        <td><input type="button"  name="Num" value="5" onclick="Cal(this.form,Num5)" class="Num"></td>
+        <td><input type="button"  name="Num" value="4" onclick="Cal(this.form,Num4)" class="Num"></td>
+        <td><input type="button" name="Sub" value="-" onclick="Cal(this.form,Minus)" class="Sub"></td>
+      </tr>
+ 
+      <tr>
+        <td><input type="button"  name="Num" value="3" onclick="Cal(this.form,Num3)" class="Num"></td>
+        <td><input type="button"  name="Num" value="2" onclick="Cal(this.form,Num2)" class="Num"></td>
+        <td><input type="button"  name="Num" value="1" onclick="Cal(this.form,Num1)" class="Num"></td>
+        <td><input type="button" name="Sub" value="*" onclick="Cal(this.form,Multiply)" class="Sub"></td>
+      </tr>
+ 
+      <tr>
+        <td><input type="button"  name="Num" value="0" onclick="Cal(this.form,Num0)" class="Num"></td>
+        <td><input type="reset" name="Clear" value="C" onclick="Clear(this.form)"></td>
+        <td><input type="button" name="Ans" value="=" onclick="Option(this.form)"></td>
+        <td><input type="button" name="Sub" value="/" onclick="Cal(this.form,Divide)" class="Sub"></td>
+      </tr>
+      </table>
+    </table>
+  </form>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        const article = {
+            num:1,
+            title:'A',
+            reply:[
+                {num: 3, title: 'A-3'},
+                {num: 2, title: 'A-2'},
+                {num: 1, title: 'A-1'},
+                ]
+            }
+
+            for (key in article){
+                console.log(article[key]);
+            }
+
+            const house =  {
+                bathroom:1,
+                room:2,
+                address:['제주도','제주시','연동'],
+                person:[
+                    {name:'kim'},
+                    {name:'lee'},
+                ]
+            }
+
+            for (key in house){
+                console.log(`${key},${house[key]}`);
+            }
+
+            delete house.bathroom;
+            house.animal = ['dog','cat'];
+
+            for (key in house){
+                console.log(`${key}, ${house[key]}`);
+            }
+    </script>
+    <style>
+    </style>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KepcoA</title>
+</head>
+<body>
+    <a href = "http://ggoreb.com">이동</a>
+</body>
+<script>
+    const link = document.querySelector('a');
+    link.addEventListener('click',(event) => {
+        alert("차단");
+        event.stopPropagation();
+    });
+</script>
+</html>

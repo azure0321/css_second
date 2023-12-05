@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        arr = [1,2,3,4];
+        function a(){ for(var i=0 ; i<arr.length; i++){
+            console.log(arr[i]*arr[i]);
+            }
+        }
+        a();
+        let result2 = arr.map((val,idx,arr)=>{
+            return val*val;
+        })
+        console.log(result2);
+        let result3 = arr.map(x=>x*x);
+        map(lambda x: x*x,arr)
+        console.log(result3);
+    </script>
+</head>
+<body>
+</body>
+</html>

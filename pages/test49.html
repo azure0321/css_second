@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KepcoA</title>
+</head>
+<body>
+    <input type ="text"> inch
+    <button>계산</button>
+    <h3></h3>
+</body>
+<script>
+    const btn = document.querySelector('button');
+
+    console.log(btn);
+    btn.addEventListener('click', ()=>{
+        const val = document.querySelector('input').value;
+        const result = val * 2.54;
+        const obj = document.querySelector('h3');
+        obj.textContent = `${result}cm`;
+    })
+</script>
+</html>

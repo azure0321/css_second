@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KepcoA</title>
+</head>
+<body>
+    <h3></h3>
+    <input type = "text">
+</body>
+<script>
+    input = document.querySelector('input');
+    const h3 = document.querySelector('h3');
+    console.log(input.value);
+    input.addEventListener(
+        'keyup', () => {
+            const length = input.value.length;
+            h3.textContent = '글자수 : ' + length;
+        });
+</script>
+</html>
